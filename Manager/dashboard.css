@@ -1,0 +1,315 @@
+/*USER DASHBOARD - CSS*/
+* body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+/* CSS for header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:  rgba(218, 216, 214, 0.4);
+  border: orange 2px solid;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: #000;
+  padding: 35px 20px;
+  font-size: larger;
+}
+
+.nav-items a:hover {
+  background-color: orangered ;
+  color: white;
+  padding: 12px;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 520px;
+  background: linear-gradient(to bottom, rgba(158, 157, 157, 0.5) 0%, rgba(253, 176, 75, 0.5) 100%), url("img/form1.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+body,
+input,
+textarea {
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #12192c;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginbox{
+  width: 400px;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+}
+
+
+.user{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50%);
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+
+
+h1{
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 22px;
+  color: blue ;
+}
+
+h2{
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 22px;
+  color: black ;
+}
+
+
+.loginbox p{
+  width: 100%;
+  max-width: 820px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  height: 70%;
+}
+
+.loginbox input{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.loginbox input[type="text"], input[type="password"]
+{
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.loginbox input[type="submit"]
+{
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #7237fc;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;  
+}
+
+.loginbox input[type="submit"]:hover
+{
+  cursor: pointer;
+  background: #a5cee9;
+  color: #000;
+}
+
+.loginbox a{
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 25px;
+  color: darkgrey;
+}
+
+.loginbox a:hover
+{
+  color: #ffc1ff;
+}
+
+.loginbox {  
+  padding: 50px;  
+  background-color: orange;  
+  height: 70%;
+ 
+}
+
+.loginbox:before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-color: orange;
+  transform: rotate(45deg);
+  top: 50px;
+  left: -13px;
+}
+
+
+
+.btncancel {  
+  width: auto;  
+  padding: 10px 18px;  
+  margin: 10px 5px;  
+}
+
+.btncancel a:hover
+{
+  color: #ffc1ff;
+}
+
+
+
+
+/*buttons*/
+.genrepbtn {
+  padding: 0.6rem 1.3rem;
+  background-color: #fff;
+  border: 2px solid #fafafa;
+  font-size: 0.95rem;
+  color: orange;
+  line-height: 1;
+  border-radius: 25px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 0;
+}
+.genrepbtn:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
+.exitportbtn {
+  padding: 0.6rem 1.3rem;
+  background-color: #fff;
+  border: 2px solid #fafafa;
+  font-size: 0.95rem;
+  color: orange;
+  line-height: 1;
+  border-radius: 25px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 0;
+}
+.exitportbtn:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
+
+.ManagerLoginContainer {
+  display: block;
+  text-align: center;
+  border-radius: 2px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.ManagerLoginContainer loginbox {
+  display: inline-block;
+  margin: 30px auto;
+  text-align: left;
+
+}
+.ManagerLoginContainer img/form1.jpeg {
+  display: inline-block;
+  width: 500px;
+   
+
+}
+
+/*
+.input-container span:before,
+.input-container span:after {
+    content: "";
+    position: absolute;
+    width: 10%;
+    opacity: 0;
+    transition: 0.3s;
+    height: 5px;
+    background-color: orange;
+    top: 50%;
+    transform: translateY(-50%);
+    border: orange 2px solid;
+}
+
+.input-container span:before {
+    left: 50%;
+}
+
+.input-container span:after {
+    right: 50%;
+}
+
+.input-container.focus label {
+    top: 0;
+    transform: translateY(-50%);
+    left: 25px;
+    font-size: 0.8rem;
+}
+
+.input-container.focus span:before,
+.input-container.focus span:after {
+    width: 50%;
+    opacity: 1;
+}
+
+.loginbox-info {
+  padding: 2.3rem 2.2rem;
+  position: relative;
+  background-color: #12192c;
+  border: orange 2px solid;
+}
+
+.loginbox-info .title {
+  color: orange;
+}
+

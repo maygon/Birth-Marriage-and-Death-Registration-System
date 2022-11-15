@@ -1,0 +1,156 @@
+/* style and align the body of the webpage */
+*body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* style and align the header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:  rgba(179, 178, 177, 0.4);
+  border: orange 2px solid;
+  background: rgba(0, 0, 0, 0.075);
+}
+
+/*style the style the navigation tabs*/
+.nav-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 20px;
+}
+
+/*style the style the navigation tabs*/
+.nav-items a {
+  text-decoration: none;
+  color: #000;
+  padding: 35px 20px;
+  font-size: larger;
+}
+
+/*style the tabs(buttons) on menu bar*/
+.nav-items a:hover {
+  background-color: orangered;
+  color: white;
+  padding: 12px;
+}
+
+/* style the background image - CSS for main element */
+.titlepage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 520px;
+  background: linear-gradient(to bottom, rgba(158, 157, 157, 0.5) 0%, rgba(253, 176, 75, 0.5) 100%), url("img/form1.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*style the text "Connect with us:"*/
+.text{
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(214, 65, 6);
+  font-size: 18px;
+  text-align: right;
+  margin: 25px;
+}
+  
+  /*buttons*/
+  .userbtn {
+    padding: 0.6rem 1.3rem;
+    background-color: #fff;
+    border: 2px solid #fafafa;
+    font-size: 0.95rem;
+    color: orange;
+    
+    border-radius: 25px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0;
+  }
+  .userbtn:hover {
+    background-color: transparent;
+    color: #fff;
+  }
+  
+  .managerbtn {
+    padding: 0.6rem 1.3rem;
+    background-color: #fff;
+    border: 2px solid #fafafa;
+    font-size: 0.95rem;
+    color: orange;
+   
+    border-radius: 25px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0;
+  }
+  .managerbtn:hover {
+    background-color: transparent;
+    color: #fff;
+  }
+  
+  .adminbtn {
+    padding: 0.6rem 1.3rem;
+    background-color: #fff;
+    border: 2px solid #fafafa;
+    font-size: 0.95rem;
+    color: orange;
+    border-radius: 25px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0;
+  }
+  .adminbtn:hover {
+    background-color: transparent;
+    color: #fff;
+  }
+
+  
+  .icon {
+    width: 28px;
+    margin-right: 0.7rem;
+    color: orange;
+  }
+  
+  .social-icons {
+    display: flex;
+    margin-top: 0.5rem;
+    margin-bottom: 0.6rem;
+    float: right;
+  }
+  
+  .social-icons a {
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    background: linear-gradient(45deg, orange, red);
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 0.5rem;
+    transition: 0.3s;
+  }
+  
+  .social-icons a:hover {
+    transform: scale(1.05);
+  }
+  
+  @media (max-width: 850px) {
+    .form {
+      grid-template-columns: 1fr;
+    }
+  
+  
+  }
+  
+  
+  

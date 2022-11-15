@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Certificates</title>
+  <link rel="stylesheet" href="style.css">
+  <scriptsrc="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>  
+<!--Logo image and also used as the home page button--> 
+<header class="header">
+  <a href="../HomePage/HomePage.html">
+  <img src="img/marks logo.jpeg" alt="logo" width="100px" height="100px"></a>
+  <div class="nav-items">
+    
+  <!--Drop down-->
+  <img src="img/profilepic.jpeg" alt="logo" width="75px" height="75px">
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">User Profile</button>
+    <div id="my_dropdown" class="dropdown-content">
+      <a href="../User Dashboard/Userdashboard.html">Logo Out</a>
+    </div>
+  </div>
+  
+  </div>
+</header>
+
+
+<h1>Certificates</h1>
+
+<!--div class="row">
+  <div class="column">
+    <div class="card">
+      <h3><u>BIRTH Certificate</u></h3>
+      <p>Please have the following information ready to complete your online Birth application form:</p>
+      <p>Full and correct name of child</p>
+      <p>Child's Date of Birth</p>
+        <p>Birth Entry Number</p>
+        <p>Child's Sex: Male or Female</p>
+        <p>Place, Parish and District of Birth and Registration</p>
+        <p>Mother’s Name</p>
+        <p>Father’s Name</p>
+    </div>
+  </div-->
+
+
+
+
+
+
+
+<script>
+  /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+  function myFunction() {
+    document.getElementById("my_dropdown").classList.toggle("show");
+  }
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+  </script>
+
+
+
+
+</body>           
+</html>

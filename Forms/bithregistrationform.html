@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<?php
+setcookie("user", Sonoo");
+?>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Birth Registration Form</title>
+  <link rel="stylesheet" href="form.css">
+ 
+</script>
+</head>
+<body>
+<!--Logo image and also used as the home page button-->
+<header class="header">
+  <a href="../HomePage/HomePage.html">
+    <img src="img/marks logo.jpeg" alt="logo" width="100px" height="100px"></a>
+  <!--form title-->
+  <h2>BIRTH REGISTRATION FORM</h2>
+  <div class="nav-items">
+  <!--Connecttion for the menu tabs--> 
+ 
+  
+  </div> 
+  <div class="action">
+    <div class="profile" onclick="menuToggle();">
+      <img src="img/user.jpeg" />
+    </div>
+    <div class="menu">
+      <h2>User Profile<br /></h2>
+      <ul>
+        <li>
+          <img src="img/user.jpeg" /><a href="../User Dashboard/User_Profile.html">My profile</a>
+        </li>
+        <li><img src="img/Help icon.jpeg" /><a href="../Help/Help.html">Help</a></li>
+        <li>
+          <img src="img/logout.jpeg" /><a href="../HomePage/HomePage.html">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</header>
+
+
+<div class="form">
+  <form action="http://localhost/Registration.php" method="POST"></form>
+  <!--form action="form.php" method="post"-->
+<!---Id number generator-->   
+    <p><button id="generate">Generate</button></p>
+    <p><code id="output"></code></p>	
+  
+    <div class="input">
+    <label> Full Name: </label> 
+    <input type="text" name="fullname" placeholder= "Enter full name" size="50" required /> 
+      
+  <div>
+    <label> Gender: </label> 
+  <label for="male" class="radio-inline"><input type="radio" name="gender" value="m" id="male">Male</label>
+  <label for="female" class="radio-inline"><input type="radio" name="gender" value="f" id="male">Female</label>
+  <label for="others" class="radio-inline"><input type="radio" name="gender" value="o" id="others">Others</label>
+</div>
+
+  <div>
+  <label> District of Birth: </label> 
+  <input type="text" name="districtofbirth" placeholder="District of Birth" size="15" required /> 
+  
+  <label> Name of Child: </label>  
+  <input type="text" name="nameofchild" placeholder="Name of Child" size="15"required /> 
+  
+  <label> Name of Mother: </label>  
+  <input type="text" name="nameofmother" placeholder="Name of Mother" size="15"required /> 
+  
+  <label> Name of Father: </label>  
+  <input type="text" name="nameoffather" placeholder="Name of Father" size="15"required /> 
+  
+
+  <label for="birthdate">Date of Birth:</label>
+  <input type="date" id="birthdate" name="birthdate"></div>  
+  
+  
+  <label> Postal Address: </label>  
+  <input type="text" name="postaladdress" placeholder="Postal Address" size="15"required /> 
+
+  <label> Entered by me from the particulars on a certificate received from: </label>  
+  <input type="text" name="enterparticulars" placeholder="Entered by me from the particulars on a certificate received from" size="15"required /> 
+  
+  <label> Witness: </label>  
+  <input type="text" name="witness" placeholder="Witness" size="15"required /> 
+  <hr>
+
+  <div class="registrationbtn">
+    <form  action="../User Dashboard/Userdashboard.html">
+    <button class="cancelbtn" type="cancel">Cancel</button></form>
+    <a href="../HomePage/HomePage.html">
+    <button class="registerbtn" type="submit" onClick="showMessage()" >Register</button></a></div>
+    
+    
+</form>
+</div>
+</body>
+
+<!---script for user profile drop down-->
+<script>
+  function menuToggle() {
+    const toggleMenu = document.querySelector(".menu");
+    toggleMenu.classList.toggle("active");
+  }
+  </script>
+
+<script type="text/javascript">
+  function showMessage() {
+      alert("Hello friends, this is message.");
+  }
+</script>
+
+<script>(function() {
+  function IDGenerator() {
+  
+    this.length = 8;
+    this.timestamp = +new Date;
+    
+    var _getRandomInt = function( min, max ) {
+     return Math.floor( Math.random() * ( max - min + 1 ) ) + min;
+    }
+    
+    this.generate = function() {
+      var ts = this.timestamp.toString();
+      var parts = ts.split( "" ).reverse();
+      var id = "";
+      
+      for( var i = 0; i < this.length; ++i ) {
+       var index = _getRandomInt( 0, parts.length - 1 );
+       id += parts[index];	 
+      }
+      
+      return id;
+    }
+
+    
+  }
+  
+  
+  document.addEventListener( "DOMContentLoaded", function() {
+   var btn = document.querySelector( "#generate" ),
+     output = document.querySelector( "#output" );
+     
+   btn.addEventListener( "click", function() {
+     var generator = new IDGenerator();
+     output.innerHTML = generator.generate();
+     
+   }, false); 
+    
+  });
+  
+  
+})();
+</script>
+
+</html>
+
+

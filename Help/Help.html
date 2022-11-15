@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>FAQ Page</title>
+  <link rel="stylesheet" href="style.css">
+  <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"></script>
+</head>
+
+<body>  
+  <header class="header">
+    <a href="../HomePage/HomePage.html">
+    <img src="img/marks logo.jpeg" alt="logo" width="100px" height="100px">
+    <div class="nav-items">
+     <!---Connect tabs in menu bar-->
+     <a class="fa fa-home" href="../HomePage/HomePage.html">Home</a>
+      <a href="../About/About.html">About Us</a>
+      <a href="../Contact us/contact us.html">Contact</a>  
+  </header>
+ <!---accordion is used to display the list of headers stacked on top of one another.-->
+  <button class="accordion">Frequenty Ask Questions</button>
+  <div class="panel">
+    <h5>Can I still get a birth certificate from the RGD, even though I lost the old one?</h5>
+    <p>Yes as long as you were born and registered in Jamaica you can obtain a birth certificate
+       by simply applying to the RGD for copies of the document.</p><br>
+
+    <h5>Can I still get a birth certificate from the RGD, even though I lost the old one?</h5>
+    <p>Yes as long as you were born and registered in Jamaica you can obtain a birth certificate
+        by simply applying to the RGD for copies of the document.</p><br>
+
+  </div>
+  
+  <button class="accordion">Career Opportunities</button>
+  <div class="panel">
+    <h5>Career Opportunity</h5>
+    <a href="https://www.rgd.gov.jm/index.php/about-us/career-opportunity">
+    <p>DIRECTOR, HUMAN RESOURCE MANAGEMENT & DEVELOPMENT (GRADE 2B)</p><br>
+    <p>Technical Audit Officer</p><br>
+    <p>Organizational Development and PMAS Officer</p><br>
+    <p>Legal Officer (Grade 4) (Vacant)</p><br>
+    </p><br></a>
+  </div>
+ 
+ <h5>Links:</h5>
+
+
+<footer>
+  <div class="connect">
+ 
+  
+  <div class="social-media">
+    <div class="text"><p>Connect with us :</p></div>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/rgd.jamaica/">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://twitter.com/rgd_jamaica?lang=en">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com/rgdjamaica/?hl=en">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://jm.linkedin.com/company/registrar-general's-department">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </div><br>
+  </div>
+</footer>
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+  
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+  </script>
+</body>           
+</html>

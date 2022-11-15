@@ -1,0 +1,146 @@
+/* style and align the body of the webpage */
+*body {
+    margin: 0;
+    box-sizing: border-box;
+    height: 100%; 
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* style and align the header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:  rgba(179, 178, 177, 0.4);
+    border: orange 2px solid;
+    background: rgba(0, 0, 0, 0.075);
+  }
+  
+  /*style the "Profile" text*/
+  p{
+    text-align: center;
+    font-style: normal;
+    font-size: 20px;
+  }
+  
+  /*style the style the navigation tabs*/
+  .nav-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+    position: relative;
+  }
+  
+  /*style the style the navigation tabs*/
+  .nav-items a {
+    text-decoration: none;
+    color: #000;
+    padding: 35px 20px;
+    font-size: larger;
+  }
+  
+  /*style the tabs(buttons) on menu bar*/
+  .nav-items a:hover {
+    background-color: rgb(238, 145, 58);
+    color: black;
+    padding: 12px;
+  }
+  
+
+  /*stye h3 text*/
+  h3{
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+   /*stye h3 text*/
+   h1{
+    color: orange;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+  }
+
+
+  /*stye p text*/
+  .p{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 12px;
+  color: #000; 
+  }
+
+
+/* Float four columns side by side */
+.column {
+  align-items: center;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+ 
+.dropbtn {
+  background-color: orangered;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: orange;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+ 
+  

@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Contact Form </title>
+    <link rel="stylesheet" href="contactus.css" />
+	  <link rel="stylesheet" href="dashboardcontact.css" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+
+ <!--Logo image and also used as the home page button-->
+ <header class="header">
+  <a href="../HomePage/HomePage.html">
+  <img src="marks logo.jpeg" alt="logo" width="100px" height="100px">
+  <div class="nav-items">
+  <!--Connecttion for the menu tabs--> 
+  <a class="fa fa-home" href="../HomePage/HomePage.html">Home</a>
+    <a href="../About/About.html">About Us</a>
+    <a href="../Help/Help.html">Help</a> 
+  </div>
+</header>
+
+
+    <div class="container">
+      
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">Let's get in touch</h3>
+          <p class="text">
+            You may contact us by using the form.
+			We can also be reached via:
+
+		
+		All email queries will be addressed within two business days of being received.
+		Our Opening hours are: Head Office- Monday to Friday 6:30am- 3:00pm
+		All other offices open: Monday to Friday 7:00am- 3:00pm
+          </p>
+
+          <div class="info">
+            <div class="information">
+             
+              <p>Address: Twickenham Park,St. Catherine</p>
+            </div>
+            <div class="information">
+              
+              <p>Website: https://www.rgd.gov.jm/</p>
+            </div>
+			
+            <div class="information">
+              <p>E-mail: information@rgd.gov.jm</p>
+            </div>
+			
+            <div class="information">
+              <p>Telephone: 876-619-1260 (Digicel) / 876-749-0550 (Flow)</p>
+            </div>
+          </div>
+
+          <div class="social-media">
+            <p>Connect with us :</p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/rgd.jamaica/">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://twitter.com/rgd_jamaica?lang=en">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://www.instagram.com/rgdjamaica/?hl=en">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://jm.linkedin.com/company/registrar-general's-department">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div><br>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+
+          <form action="index.html" autocomplete="off">
+            <h3 class="title">Contact us</h3>
+            <div class="input-container">
+              <input type="text" name="name" class="input"  required />
+              <label for="">Full Name</label>
+              <span>Full Name</span>
+            </div>
+            <div class="input-container">
+              <input type="text" name="email" class="input" required />
+              <label for="">Email</label>
+              <span>Email</span>
+            </div>
+            <div class="input-container">
+              <input type="tel" name="phone" class="input" required />
+              <label for="">Phone</label>
+              <span>Phone</span>
+            </div>
+            <div class="input-container textarea">
+              <textarea name="message" class="input"></textarea>
+              <label for="">Message</label>
+              <span>Message</span>
+            </div-->
+			<input type="submit" value="Submit" class="btn" onClick="create_account()"/> 
+			<input type="submit" value="Cancel" class="btn" onClick="cancel()"/> 
+          </form>
+        </div>
+      </div>
+    </div>
+ <script>  
+                function cancel(){  
+                alert("Are you sure you want to cancel??"); }  
+        </script>
+<script src="script.js"></script>
+ 
+</body>  
+</html>  
+  </body>
+</html>
