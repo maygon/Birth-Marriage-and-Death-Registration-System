@@ -7,7 +7,7 @@ function OpenCon()
     $host="localhost";
     $password="";
     $user="root";
-    $db="test2";
+    $db="e_registrydb";
     $conn=new mysqli($host,$user,$password,$db) or die("Connect failed: %s/n".$conn->error);
 
 return $conn;
