@@ -38,7 +38,7 @@
 body,
 input,
 textarea {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .container {
@@ -366,12 +366,10 @@ textarea.input {
   }
 }
 
-
-
 .credit{
   text-align: center;
   color: #fff;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .credit a{
