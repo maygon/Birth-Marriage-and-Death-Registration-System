@@ -103,7 +103,7 @@ document.getElementById('submitBtn').addEventListener('click',(e)=>{
        </script>
             <button type="submit" id="submitBtn" class="btn btn-success save-btn">Add User</button>
 			
-			<button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+			<button type="button" class="btn cancel" onclick="closeForm();">Cancel</button>
         </form>
 		
 		 </div>
