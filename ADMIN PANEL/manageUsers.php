@@ -1,4 +1,16 @@
-<!DOCTYPE html>
+<?php 
+
+$username="";
+if(isset($_GET['user']))
+{
+  $username=$_GET['user'];
+}else{
+  echo '<script>alert("You are not logged in")</script>';
+
+  echo '<script> window.location.href="../index/index.html"</script>';
+
+  
+}?><!DOCTYPE html>
 <html>
 <meta charset="utf-8">
 <head>
@@ -6,18 +18,29 @@
 	<link rel="stylesheet" href="admin.css">
 	<link rel="stylesheet" href="Dashboard.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script
+    src="https://kit.fontawesome.com/64d58efce2.js"
+    crossorigin="anonymous"></script>
 </head>
 <body>
-<header class="header">
-    <img src="marks logo.png" alt="logo" width="100px" height="100px">
+
+<body>
+ <!--Logo image and also used as the home page button--> 
+ <header class="header">
+    <a href="../index/index.html" ><img src="marks logo.jpeg"logo" width="100px" height="100px"></a>
+    <!--h1>MARK's E-REGISTRY</h1-->
     <div class="nav-items">
-      <a href="../HomePage/HomePage.html">Home</a>
+    <!--Link for the menu tabs-->
+    <a class="fa fa-home" href="../Index.html">Home</a>
       <a href="../About/About.html">About Us</a>
       <a href="../Contact us/contact us.html">Contact</a>
-      <a href="../Help/Help.html">Help</a> 
+      <a href="../Help/Help.html">Help</a>
     </div>
   </header>
+
+
     <div class="container" align="center">
+        <div style="font-size:1.45em"> <strong>Logged in as  <?php echo $username?></strong></div>
         <h1>SYSTEM ADMINISTRATOR PANEL</h1>
       <div class="form-popup" id="myForm">
   <form action="/action_page.php" class="form-container">
@@ -26,9 +49,9 @@
                 <input type="text" name="userid" class="form-control" placeholder="User ID" required="">
             </div>
         
-            <div class="form-group">
+           <!-- <div class="form-group">
                 <input type="text" name="username" class="form-control" placeholder="User Name" required="">
-            </div>
+            </div>-->
           
           <div class="form-group">
                 <input type="text" name="email" class="form-control" placeholder="User Email" required="">
@@ -40,14 +63,47 @@
           <div class="form-group">
                 <input type="text" name="lastname" class="form-control" placeholder="Lastname" required="">
             </div>
-          
+          <div style="display:none;font-weight:bold; color:red;" id="mismatchPassword" >Passwords mismatch</div>
           <div class="form-group">
-                <input type="password" name="password" class="form-control" placeholder="Password" required="">
+                <input type="password" name="password" class="form-control" placeholder="Password" id="password" required="">
             </div>
-       
-            <button type="submit" class="btn btn-success save-btn">Add User</button>
+            <div class="form-group">
+                <input type="password" name="Confirmpassword" class="form-control" id="confirmPassword" placeholder="Password" required="">
+</div>
+       <script>
+
+                pass=document.getElementById("password").value;
+                confirmpass=document.getElementById("confirmPassword").value;
+                function confirmPasswords()
+                {
+                    AddtheUser=true;
+                    pass=document.getElementById("password").value;
+                confirmpass=document.getElementById("confirmPassword").value;
+
+                if(pass!=confirmpass)
+                {
+                   mess= document.getElementById("mismatchPassword");
+                   mess.style.display='block';
+                   mess.focus();
+                   AddtheUser=false;
+                }
+                return AddtheUser;
+
+                }
+                
+document.getElementById('submitBtn').addEventListener('click',(e)=>{
+    e.preventDefault();
+    if(!confirmPasswords()){
+
+        
+
+    }
+}
+
+       </script>
+            <button type="submit" id="submitBtn" class="btn btn-success save-btn">Add User</button>
 			
-			<button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+			<button type="button" class="btn cancel" onclick="closeForm();">Cancel</button>
         </form>
 		
 		 </div>
@@ -155,3 +211,4 @@ function closeForm() {
       
 </body>
 </html>
+<?php ?>

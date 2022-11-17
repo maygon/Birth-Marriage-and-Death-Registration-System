@@ -1,4 +1,18 @@
-<!DOCTYPE html>
+<?php 
+
+$username="";
+if(isset($_GET['user']))
+{
+  $username=$_GET['user'];
+}else{
+  echo '<script>alert("You are not logged in")</script>';
+
+  echo '<script> window.location.href="../index/index.html"</script>';
+
+  
+}
+
+?><!DOCTYPE html>
 <html>
 
 <head>
@@ -16,10 +30,10 @@
  
   
   <header class="header">
-    <a class="fa fa-home" href="../Index.html">Home</a>
+    <a href="../index/Index.html">
       <img src="img/marks logo.jpeg" alt="logo" width="100px" height="100px"></a>
     <div class="nav-items">
-      <a class="fa fa-home" href="../HomePage/HomePage.html">Home</a>
+      <a class="fa fa-home" href="../index/Index.html">Home</a>
       <a href="../About/About.html">About Us</a>
       <a href="../Contact us/contact us.html">Contact</a>
       <a href="../Help/Help.html">Help</a> 
@@ -33,7 +47,7 @@
     <div class="intro">
       <img src="img/project_name.jpeg">
       <div class="title"> 
-      <p><text-align ="center"><h2>WELCOME TO MARKS' EREGISTRY MANAGER'S PORTAL.</h2>
+      <p><text-align ="center"><h2>Hello <?php echo $username?>,WELCOME TO MARKS' EREGISTRY MANAGER'S PORTAL.</h2>
        </div>
 
            
@@ -54,3 +68,5 @@
   
 </body>           
 </html>
+
+<?php ?>
