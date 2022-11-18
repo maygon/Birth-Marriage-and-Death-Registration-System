@@ -30,7 +30,7 @@ if(isset($_GET['user']))
     <a  href="../index/Index.html">
       <img src="../img/marks logo.jpeg" alt="logo" width="100px" height="100px"></a>
     <div class="nav-items">
-      <a class="fa fa-home" href="../index/index.html">Home</a>
+      <a class="fa fa-home" href="../index/Index.html">Home</a>
       <a href="../About/About.html">About Us</a>
       <a href="../Contact us/contact us.html">Contact</a>
       <a href="../Help/Help.html">Help</a> 

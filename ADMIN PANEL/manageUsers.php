@@ -137,12 +137,13 @@ function closeForm() {
         $("form").submit(function(e){
             e.preventDefault();
             var userid = $("input[name='userid']").val();
-            var username = $("input[name='username']").val();
+            //var username = $("input[name='userID]").val();
             var email = $("input[name='email']").val();
             var firstname= $("input[name='firstname']").val();
             var lastname= $("input[name='lastname']").val();
 			var password= $("input[name='password']").val();
-            $(".data-table tbody").append("<tr data-userid='"+userid+"' data-username='"+username+"' data-email='"+email+"' data-firstname='"+firstname+"' data-lastname='"+lastname+"' data-password='"+password+"'><td>"+userid+"</td><td>"+username+"</td> <td>"+email+"</td><td><button class='btn btn-info btn-xs btn-edit'>Edit</button><button class='btn btn-danger btn-xs btn-delete'>Delete</button></td></tr>");
+            var username= firstname+" "+lastname;
+            $(".data-table tbody").append("<tr data-userid='"+userid+"' data-username='"+firstname+" "+lastname+"' data-email='"+email+"' data-firstname='"+firstname+"' data-lastname='"+lastname+"' data-password='"+password+"'><td>"+userid+"</td><td>"+username+"</td> <td>"+email+"</td><td><button class='btn btn-info btn-xs btn-edit'>Edit</button><button class='btn btn-danger btn-xs btn-delete'>Delete</button></td></tr>");
 			
             $("input[name='userid']").val('');
             $("input[name='username']").val('');
