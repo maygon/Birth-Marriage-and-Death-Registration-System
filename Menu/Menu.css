@@ -60,14 +60,13 @@
   margin: 25px;
 }
   
-  /*buttons*/
+  /*User Login button*/
   .userbtn {
     padding: 0.6rem 1.3rem;
     background-color: #fff;
     border: 2px solid #fafafa;
     font-size: 0.95rem;
     color: orange;
-    
     border-radius: 25px;
     outline: none;
     cursor: pointer;
@@ -79,6 +78,24 @@
     color: #fff;
   }
   
+  /*Help Login button*/
+  .helpbtn {
+    padding: 0.6rem 1.3rem;
+    background-color: #fff;
+    border: 2px solid #fafafa;
+    font-size: 0.95rem;
+    color: orange;
+    border-radius: 25px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0;
+  }
+  .helpbtn:hover {
+    background-color: transparent;
+    color: #fff;
+  }
+
   .managerbtn {
     padding: 0.6rem 1.3rem;
     background-color: #fff;
