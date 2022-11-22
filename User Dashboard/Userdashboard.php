@@ -34,7 +34,7 @@ if(isset($_GET['user']))
     <!--Link for the menu tabs-->
     <a class="fa fa-home" href="../index/Index.html">Home</a>
       <a href="../About/About.html">About Us</a>
-      <a href="../Contact us/contact us.html">Contact</a>
+      <!--a href="../Contact us/contact us.html">Contact</a-->
       <a href="../Help/Help.html">Help</a>
     </div>
   
