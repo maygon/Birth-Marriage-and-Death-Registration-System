@@ -11,7 +11,9 @@ if(isset($_GET['user']))
   
 }
 
-?><!DOCTYPE html>
+
+?>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -50,7 +52,7 @@ if(isset($_GET['user']))
         <button class="btn1"><b>Access User Information</b></button>
       </a>
 	  
-		<a href="https://www.rgd.gov.jm/images/PDF_FILE/PUBLICATION/2018%20Vital%20Statistics%20Tables.pdf" class="current">
+		<a href="" class="current">
         <button class="btn2"><b>Generate Report</b></button>
       </a>
   

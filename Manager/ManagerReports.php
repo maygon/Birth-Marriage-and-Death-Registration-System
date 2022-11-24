@@ -1,18 +1,7 @@
 <?php 
 
-$username="";
-if(isset($_GET['user']))
-{
-  $username=$_GET['user'];
-}else{
-  echo '<script>alert("You are not logged in")</script>';
-
-  echo '<script> window.location.href="../index/index.html"</script>';
-
-  
-}
-
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -47,20 +36,28 @@ if(isset($_GET['user']))
     <div class="intro">
       <img src="img/project_name.jpeg">
       <div class="title"> 
-      <p><text-align ="center"><h2>Hello <?php echo $username?>,WELCOME TO MARKS' EREGISTRY MANAGER'S PORTAL.</h2>
+      <p><text-align ="center"><h2>PLEASE SELECT A REPORT TO GENERATE.</h2>
        </div>
 
            
     <div class="managerbtn">
      
-      <a href="ManagerReports.php" class="current">
-        <button class="genrepbtn">GENERATE REPORT</button>
+      <a href="birthreport.html" class="current">
+        <button class="genrepbtn">Birth Registration Report</button>
+      </a>
+
+      <a href="marriagereport.html" class="current">
+        <button class="genrepbtn">Marriage Registration Report </button>
+      </a>
+
+      <a href="deathreport.html" class="current">
+        <button class="genrepbtn">Death Registration Report</button>
       </a>
 	  </div>
 	  <br></br>
 		<div class="managerbtn">
-      <a href="Homepage.html" class="current">
-        <button class="exitportbtn">EXIT PORTAL</button>
+      <a href="../User/userlogin.html" class="current">
+        <button class="exitportbtn">Logout</button>
       </a>
     </div>
 
@@ -68,5 +65,4 @@ if(isset($_GET['user']))
   
 </body>           
 </html>
-
 <?php ?>
