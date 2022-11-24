@@ -23,10 +23,10 @@
   <!--form title-->
   <h2>BIRTH REGISTRATION FORM</h2>
   <div class="nav-items">
-  <!--Connecttion for the menu tabs--> 
+  <!--Connecttion for the menu tabs-->
  
-  
-  </div> 
+ 
+  </div>
   <div class="action">
     <div class="profile" onclick="menuToggle();">
       <img src="img/user.jpeg" />
@@ -34,47 +34,39 @@
     <div class="menu">
       <h2>User Profile<br /></h2>
       <ul>
+
         <li><img src="img/Help icon.jpeg" /><a href="../Help/Help.html">Help</a></li>
         <li>
           <img src="img/logout.jpeg" /><a href="../HomePage/HomePage.html">Logout</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-</header>
-
-
-<div class="form">
+@ -55,146 +53,144 @@
   <form action="http://localhost/Registration.php" method="POST"></form>
   <!--form action="form.php" method="post"-->
-
+<!---Id number generator-->   
 
     <div class="input">
+
       <div><label for="birthID">Birth ID:</label>
         <input type="id" id="birthID" name="Birth ID"></div>  
-        <br>
 
-        <hr>
-        <label>Date of Registration</label> 
-<input type="date" name="Date of Registration" placeholder= "Date of Registration" size="" required /> 
+        <label>Date of Registration</label>
+<input type="date" name="Date of Registration" placeholder= "Date of Registration" size="" required />
 <br>
 
-<br>
-<label> First Name: </label> 
-      <input type="text" name="firstname" placeholder= "First Name " size="15" required /> 
+<hr>
+<label> First Name: </label>
+      <input type="text" name="firstname" placeholder= "First Name " size="15" required />
       <div>
-      
+     
         <div><label for="lastname">Last Name:</label>
-          <input type="text" name="lastname" placeholder= "Last Name " size="15" required /> 
-          
+          <input type="text" name="lastname" placeholder= "Last Name " size="15" required />
+         
   <div>
-    <label> Gender: </label> 
+    <label> Gender: </label>
   <label for="male" class="radio-inline"><input type="radio" name="gender" value="m" id="male">Male</label>
   <label for="female" class="radio-inline"><input type="radio" name="gender" value="f" id="male">Female</label>
   <label for="others" class="radio-inline"><input type="radio" name="gender" value="o" id="others">Others</label>
 </div>
-<br>
+
 <label for="birthdate">Date of Birth:</label>
 <input type="date" id="birthdate" name="birthdate"></div>  
 
@@ -96,29 +88,29 @@
           <div> 
   
   <!--label> Entered by me from the particulars on a certificate received from: </label>  
-  <input type="text" name="enterparticulars" placeholder="Entered by me from the particulars on a certificate received from" size="15"required /--> 
-  
+  <input type="text" name="enterparticulars" placeholder="Entered by me from the particulars on a certificate received from" size="15"required /-->
+ 
   <h4>WITNESS DETAILS</sh4>
     <hr>
     <div><label for="witnessID">Witness ID:</label>
       <input type="id" id="witnessID" name="Witness ID"></div>  
 
-    <label>Name of Witness: </label> 
-    <input type="text" name="name" placeholder= "Name Of Witness" size="15" required /> 
+    <label>Name of Witness: </label>
+    <input type="text" name="name" placeholder= "Name Of Witness" size="15" required />
     <div>
-    
+   
   <label> Address: </label>  
-  <input type="text" name="address" placeholder="Address" size="15"required /> 
+  <input type="text" name="address" placeholder="Address" size="15"required />
  
-  
+ 
 
   <div class="registrationbtn">
     <form  action="../User Dashboard/Userdashboard.html">
     <button class="cancelbtn" type="cancel">Cancel</button></form>
     <a href="../HomePage/HomePage.html">
     <button class="registerbtn" type="submit" onClick="showMessage()" >Register</button></a></div>
-    
-    
+   
+   
 </form>
 </div>
 </body>
@@ -137,13 +129,55 @@
   }
 </script>
 
+<script>(function() {
+  function IDGenerator() {
+  
+    this.length = 8;
+    this.timestamp = +new Date;
+    
+    var _getRandomInt = function( min, max ) {
+     return Math.floor( Math.random() * ( max - min + 1 ) ) + min;
+    }
+    
+    this.generate = function() {
+      var ts = this.timestamp.toString();
+      var parts = ts.split( "" ).reverse();
+      var id = "";
+      
+      for( var i = 0; i < this.length; ++i ) {
+       var index = _getRandomInt( 0, parts.length - 1 );
+       id += parts[index];	 
+      }
+      
+      return id;
+    }
+
+    
+  }
+  
+  
+  document.addEventListener( "DOMContentLoaded", function() {
+   var btn = document.querySelector( "#generate" ),
+     output = document.querySelector( "#output" );
+     
+   btn.addEventListener( "click", function() {
+     var generator = new IDGenerator();
+     output.innerHTML = generator.generate();
+     
+   }, false); 
+    
+  });
+  
+  
+})();
+</script>
+
   <div class="footer">
     <a href="../About/About.html">About Us</a>
-   
+    <!--a href="../Contact us/contact us.html">Contact</a-->
     <a href="../Help/Help.html">Help</a>
   </div>
 </footer>
 
 </html>
-
 
