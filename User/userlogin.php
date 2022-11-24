@@ -85,8 +85,10 @@ else{
     <!--Link for the menu tabs-->
     <a class="fa fa-home" href="../index/Index.html">Home</a>
       <a href="../About/About.html">About Us</a>
-      <!--a href="../Contact us/contact us.html">Contact</a-->
+
       <a href="../Help/Help.html">Help</a>
+      <a class="fa fa-sign-out" href="../index/Index.html"></a>
+  
     </div>
   </header>
   
@@ -112,7 +114,7 @@ else{
    function validate(){
    var username = document.getElementById("username").value;
    var password = document.getElementById("password").value;
-   if ( username == "user" && password == "user123"){
+   if ( username == "UserId" && password == "password"){
    alert ("Login successfully");
    //window.location.href = "Userdashboard.html"; // Redirecting to other page.
    window.location.href = "../User Dashboard/Userdashboard.html";
