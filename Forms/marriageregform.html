@@ -28,19 +28,16 @@
       <div class="menu">
         <h2>User Profile<br /></h2>
         <ul>
-          <li>
-            <img src="img/user.jpeg" /><a href="../User Dashboard/User_Profile.html">My profile</a>
-          </li>
           <li><img src="img/Help icon.jpeg" /><a href="../Help/Help.html">Help</a></li>
           <li>
-            <img src="img/logout.jpeg" /><a href="../HomePage/HomePage.html">Logout</a>
+            <img src="img/logout.jpeg" /><a href="../index/Index.html">Logout</a>
           </li>
         </ul>
       </div>
     </div>
 
   </header>
-  <form>
+  <form id="myform" onsubmit="return handle_form_submission()">
   
     <div class="input">
   
@@ -127,14 +124,21 @@
       
   </div>
   <div class="registrationbtn">
-    <form  action="../User Dashboard/Userdashboard.html">
+    <form  action="../User Dashboard/Userdashboard.php">
     <button class="cancelbtn" type="submit">Cancel</button></form>
     <button class="registerbtn">Register</button></div>
   
-  </form>
+  
 </body>
 <!---script for user profile drop down-->
 <script>
+  
+
+  function handle_form_submission()
+{
+  alert('Registered successfully.');
+  return true; //do not submit the form
+}
   function menuToggle() {
     const toggleMenu = document.querySelector(".menu");
     toggleMenu.classList.toggle("active");
