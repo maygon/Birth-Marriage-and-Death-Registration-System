@@ -8,7 +8,7 @@
 <body>
   <!--Logo image and also used as the home page button--> 
   <header class="header">
-    <img src="img/marks logo.jpeg" alt="logo" width="100px" height="100px"></a>
+    <img src="img/marks logo.jpeg" alt="logo" width="100px" height="100px">
     <!--h1>MARK's E-REGISTRY</h1-->
     <div class="nav-items">
     <!--Link for the menu tabs-->
@@ -21,17 +21,15 @@
   
   <div class="container">
     <div class="loginbox">
-      
-
        <img src="img/user.jpeg" alt="user" class="center">
         <h1>User Login</h1>
-    <form id="form_id" method="post" name="myform" action ="../User/userlogin.php">
+    <form id="form_id" method="post" name="myform" action ="../User Dashboard/Userdashboard.html">
        <label>User ID :</label>
-     <input type="text" name="UserId" id="username"/>
+     <input type="text" name="username" id="username"/>
 
      <label>Password :</label>
      <input type="password" name="password" id="password"/>
-     <input type="submit" value="Login" id="submit" name="submit"/>
+     <input type="submit" value="Login" id="submit" onclick="validate()"/>
     
 
 

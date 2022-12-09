@@ -3,14 +3,12 @@ if(isset($_GET['user']))
 {
   $username=$_GET['user'];
 }else{
-  echo '<script>alert("Your registration has been cancelled")</script>';
+  echo '<script>alert("You are not logged in")</script>';
 
   echo '<script> window.location.href="../index/index.html"</script>';
 
   
-}?>
-
-<!DOCTYPE html>
+}?><!DOCTYPE html>
 <html>
 
 <head>
@@ -40,33 +38,39 @@ if(isset($_GET['user']))
       <a href="../Help/Help.html">Help</a>
     </div>
   
+      
+      <!--Awesome icons (Sign Out)--->
+    </ul>
+    <div class="dropdown">
+      <button class="dropbtn">Types of Certificates</button>
+      <div class="dropdown-content">
+        <a href="../Certificates/certificates.html">Birth Certificate</a>
+        <a href="../Certificates/certificates.html">Marriage Certificate</a>
+        <a href="../Certificates/certificates.html">Death Certificate</a>
+      </div>
+    </div>
 
-
-    <a href="../Certificates/certificates.html">
-        <button class="deathRegbtn"><b>Certificate Status</b></button>
-      </a>
-     
-  
+    </div>
   </header>
 
 
   <div class="title">
     <img src="img/project_name.jpeg">
 
-    <p style="font-size:1.4em"><strong>Hello <?php echo $username?></strong>, please select a type of Registration Form</p>
+    <p style="font-size:1.4em"><strong>Hello <?php echo $username?></strong> ,please select a type of Registration Form</p>
 
     <div class="formbtn">
      
       <a href="../Forms/bithregistrationform.html">
-        <button class="birthRegbtn"><b>Birth Registration Form</b></button>
+        <button class="birthRegbtn">Birth Registration Form</button>
       </a>
 
       <a href="../Forms/marriageregform.html">
-        <button class="marriageRegbtn"><b>Marriage Registration Form</b></button>
+        <button class="marriageRegbtn">Marriage Registration Form</button>
       </a>
 
       <a href="../Forms/deathregform.html">
-        <button class="deathRegbtn"><b>Death Registration Form</b></button>
+        <button class="deathRegbtn">Death Registration Form</button>
       </a>
     </div>
 

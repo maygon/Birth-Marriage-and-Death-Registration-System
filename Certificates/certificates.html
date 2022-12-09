@@ -1,138 +1,62 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html>
+
 <head>
-    <title>Certificate Status</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script
-    src="https://kit.fontawesome.com/64d58efce2.js"
-    crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Certificates</title>
+  <link rel="stylesheet" href="style.css">
+  <scriptsrc="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
 </head>
 
-  <!--Logo image and also used as the home page button--> 
-  <header class="header">
-    <a href="../Index/Index.html">
+<body>  
+<!--Logo image and also used as the home page button--> 
+<header class="header">
+  <a href="../index/Index.html">
     <img src="img/marks logo.jpeg" alt="logo" width="100px" height="100px">
+  <div class="nav-items">
     
-    <div class="nav-items">
-    <!--Link for the menu tabs-->
-    <a class="fa fa-home" href="../Index/Index.html">Home</a>
-      <a href="../About/About.html">About Us</a>
-      <a href="../Help/Help.html">Help</a>
+  <!--Drop down-->
+  <img src="img/profilepic.jpeg" alt="logo" width="75px" height="75px">
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">User Profile</button>
+    <div id="my_dropdown" class="dropdown-content">
+      <a href="../User Dashboard/Userdashboard.html">Logo Out</a>
     </div>
-  </header>
+  </div>
+  
+  </div>
+</header>
 
-  <br>
-<body class="regtable">
-    <div class="container">
-        <h3>
-            <span>Search By Application Number:</span>
-            <input type="search" placeholder="Search..." class="form-control search-input" data-table="register-list"/>
-        </h3>
-        
-        <table class="table table-striped regtable register-list">
-            <thead>
-                <tr>
-                    <th>Regitration ID</th>
-                    <th>Name</th>
-                    <th>Gender</th>
-                    <th>Address</th>
-                    <th>Parish</th>
-                    <th>Status</th>
-                    <th>Print</th>
-                    <br>
 
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>PB10124578</td>
-                    <td>Paul Black</td>
-                    <td>Female</td>
-                    <td>St Thomas Court</td>
-                    <td>St James</td>
-                    <td>In Progress</td>
-                    <td><button type="submit" id="print" onclick="printPage()">Print</button></td>
+<h1>Certificates</h1>
 
-                </tr>
-                <tr>
-                  <td>NR24875325</td>
-                  <td>Nathan Ried</td>
-                  <td>Male</td>
-                  <td>St Mary Court</td>
-                  <td>St James</td>
-                  <td>Complete</td>
-                  <td><button type="submit" id="print" onclick="printPage()">Print</button></td>
-              </tr>
 
-              <tr>
-                <td>JD548975326</td>
-                <td>John Dover</td>
-                <td>Male</td>
-                <td>Black River </td>
-                <td>St Elizabeth</td>
-                <td>Complete</td>
-                <td><button type="submit" id="print" onclick="printPage()">Print</button></td>
-            </tr>
 
-            <tr>
-                <td>AB548762316</td>
-                <td>Amelia Brown</td>
-                <td>Female</td>
-                <td>15 John Road</td>
-                <td>Kingston</td>
-                <td>In Progress</td>
-                <td><button type="submit" id="print" onclick="printPage()">Print</button></td>
-            </tr>
-            </tbody>
-            
-        </table>
-    </div>
-    <script>
-        (function(document) {
-            'use strict';
-
-            var TableFilter = (function(myArray) {
-                var search_input;
-
-                function _onInputSearch(e) {
-                    search_input = e.target;
-                    var tables = document.getElementsByClassName(search_input.getAttribute('data-table'));
-                    myArray.forEach.call(tables, function(table) {
-                        myArray.forEach.call(table.tBodies, function(tbody) {
-                            myArray.forEach.call(tbody.rows, function(row) {
-                                var text_content = row.textContent.toLowerCase();
-                                var search_val = search_input.value.toLowerCase();
-                                row.style.display = text_content.indexOf(search_val) > -1 ? '' : 'none';
-                            });
-                        });
-                    });
-                }
-
-                return {
-                    init: function() {
-                        var inputs = document.getElementsByClassName('search-input');
-                        myArray.forEach.call(inputs, function(input) {
-                            input.oninput = _onInputSearch;
-                        });
-                    }
-                };
-            })(Array.prototype);
-
-            document.addEventListener('readystatechange', function() {
-                if (document.readyState === 'complete') {
-                    TableFilter.init();
-                }
-            });
-
-        })(document);
-
-        
-    function printPage() {
-        window.print();
+<script>
+  /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+  function myFunction() {
+    document.getElementById("my_dropdown").classList.toggle("show");
+  }
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
     }
+  }
+  </script>
 
-    </script>
 
-</body>
+
+
+</body>           
 </html>
