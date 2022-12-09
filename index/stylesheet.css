@@ -117,12 +117,14 @@ h3{
   justify-content: space-between;
  }
 
- /*align the meet our team column*/
+ /*align the meet our team column
  body {
    font-family: Arial, Helvetica, sans-serif;
    margin: 0;
  }
-  
+ */
+
+
  /*align the meet our team column*/
  .column {
    float: left;
@@ -131,7 +133,7 @@ h3{
    padding: 0 8px;
  }
 
-/* Float four columns side by side */
+/* Float four columns side by side 
 .column {
   float: left;
   width: 25%;
@@ -167,7 +169,7 @@ h3{
   padding: 25px;
 }
 
-/*stye the get started button*/
+/*stye the Get STarted button*/
 .btn {
   padding: 0.6rem 1.3rem;
   background-color: #fff;
